@@ -15,7 +15,6 @@ bkc.ru
 
 cosmo.ru
 esquire.ru
-graziamagazine.ru
 bazaar.ru
 popmech.ru
 
@@ -24,3 +23,7 @@ buhsoft.ru
 usn247.ru
 
 tvrain.ru
+
+globuscantata.com
+
+aftaa.ru
