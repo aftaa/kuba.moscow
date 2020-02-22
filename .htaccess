@@ -1,11 +1,8 @@
-#Deny From All
-#Allow From 127.0.0.1 192.168.1.2
-
 RewriteEngine On
 
 RewriteCond %{HTTP_HOST} ^kuba.moscow$
 RewriteCond %{SERVER_PORT} ^80$
-RewriteRule ^(.*)$ https://kuba.moscow/$1 [R=302,L]
+RewriteRule ^(.*)$ https://kuba.moscow/$1 [R=302,L,QSA]
 
 RewriteCond %{HTTP_HOST} ^www\.kuba\.moscow [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=302,L]
+RewriteRule ^(.*)$ https://kuba.moscow/$1 [R=302,L,QSA]
