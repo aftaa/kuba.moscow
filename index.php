@@ -39,7 +39,7 @@ $sites2 = readSites($filename2);
 <body>
 
 <main class="container">
-    <h2 class="display-4" style="background: yellow">kuba.moscow.ru</h2>
+    <h2 class="display-4" style="background: yellow">kuba.moscow</h2>
     <h3>
         Создание простых сложных сайтов любой направленности,
         автоматизирование бизнес-процессов вашей конторы
