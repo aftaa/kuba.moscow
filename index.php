@@ -35,6 +35,7 @@ $sites2 = readSites($filename2);
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/kuba.moscow.css">
     <?php require_once 'metrika.html' ?>
+    <link rel="icon" href="favicon.png">
 </head>
 <body>
 
