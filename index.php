@@ -61,7 +61,6 @@ $sites2 = readSites($filename2);
             'docker@kuba.moscow',
         ];
         sort($managers);
-//        echo "<pre>"; print_r($managers); echo "</pre>"; die;
 
         $day = (int)date('d');
 
