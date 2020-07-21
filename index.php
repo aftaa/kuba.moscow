@@ -75,7 +75,7 @@ $sites2 = readSites($filename2);
         }
 
         ?>
-        <a class="" href="<?= $manager ?>"><?= $manager ?></a>
+        <a class="" href="mailto:<?= $manager ?>"><?= $manager ?></a>
     </div>
 
     <hr size="1">
