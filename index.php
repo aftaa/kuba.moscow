@@ -53,7 +53,30 @@ $sites2 = readSites($filename2);
     <div class="text-center h0">
         <small>Сегодня дежурный менеджер &mdash;</small>
         <br>
-        <a class="" href="mailto:max@kuba.moscow">max@kuba.moscow</a>
+        <?php
+        $managers = [
+            'max@kuba.moscow',
+            'ubuntu@kuba.moscow',
+            'debian@kuba.moscow',
+            'docker@kuba.moscow',
+        ];
+        sort($managers);
+//        echo "<pre>"; print_r($managers); echo "</pre>"; die;
+
+        $day = (int)date('d');
+
+        if (!($day % 4)) {
+            $manager = $managers[3];
+        } elseif (!($day % 3)) {
+            $manager = $managers[2];
+        } elseif (!($day % 2)) {
+            $manager = $managers[1];
+        } else {
+            $manager = $managers[0];
+        }
+
+        ?>
+        <a class="" href="<?= $manager ?>"><?= $manager ?></a>
     </div>
 
     <hr size="1">
@@ -65,7 +88,8 @@ $sites2 = readSites($filename2);
                 <div class="row">
                     <?php foreach ($sites1 as $site): ?>
                         <div class="col-lg-5 col-sm-6">
-                            <a href="http://<?= $site ?>" rel="nofollow" target="_blank" class="site-link"><?= $site ?></a><br>
+                            <a href="http://<?= $site ?>" rel="nofollow" target="_blank"
+                               class="site-link"><?= $site ?></a><br>
                         </div>
                     <?php endforeach ?>
                 </div>
@@ -77,7 +101,8 @@ $sites2 = readSites($filename2);
                 <div class="row">
                     <?php foreach ($sites2 as $site): ?>
                         <div class="col-lg-4 col-sm-6">
-                            <a href="http://<?= $site ?>" rel="nofollow" target="_blank" class="site-link"><?= $site ?></a><br>
+                            <a href="http://<?= $site ?>" rel="nofollow" target="_blank"
+                               class="site-link"><?= $site ?></a><br>
                         </div>
                     <?php endforeach ?>
                 </div>
@@ -87,7 +112,9 @@ $sites2 = readSites($filename2);
     <hr size="1">
     <div style="background: #333; margin: 1em; padding: 2em;">
         <h1 style="color: #fff;">Сколько денег?</h1>
-        <div style="color: #fff;">Каждый раз по-разному. Иногда сайт-визитка стоит дороже мега-портала. Надо смотреть, в общем.</div>
+        <div style="color: #fff;">Каждый раз по-разному. Иногда сайт-визитка стоит дороже мега-портала. Надо смотреть, в
+            общем.
+        </div>
     </div>
     <br>
 </main>
