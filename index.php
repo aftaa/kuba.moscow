@@ -32,6 +32,8 @@ $sites2 = readSites($filename2);
 <html lang="ru">
 <head>
     <title>kuba.moscow &mdash; создание простых сложных сайтов</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/kuba.moscow.css">
     <?php require_once 'metrika.html' ?>
