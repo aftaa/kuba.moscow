@@ -60,9 +60,9 @@ $sites2 = readSites($filename2);
         <?php
         $managers = [
             'max@kuba.moscow',
-            'ubuntu@kuba.moscow',
-            'debian@kuba.moscow',
-            'docker@kuba.moscow',
+            'max@kuba.moscow',
+            'max@kuba.moscow',
+            'max@kuba.moscow',
         ];
         sort($managers);
 

@@ -1,13 +1,18 @@
-version: '3'
+version: '4'
 
 services:
-  app:
-    build:
-      context: .
+  nginx:
+    image: nginx:latest
     ports:
-      - 8080:80
-    command: 
-      tail -f /dev/null 
+      - "8083:80"
     volumes:
-      - .:/var/www/html
-      - ./nginx:/etc/nginx
+      - .:/var/www/kuba.moscow
+      - ./docker/nginx/hosts:/etc/nginx/conf.d
+      - ./docker/nginx/logs:/var/log/nginx
+    links:
+      - php
+
+  php:
+    build: ./docker/php
+    volumes:
+      - .:/var/www/kuba.moscow
