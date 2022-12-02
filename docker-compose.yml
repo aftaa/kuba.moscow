@@ -9,10 +9,12 @@ services:
       - .:/var/www/kuba.moscow
       - ./docker/nginx/hosts:/etc/nginx/conf.d
       - ./docker/nginx/logs:/var/log/nginx
+    restart: always
     links:
       - php
 
   php:
     build: ./docker/php
+    restart: always
     volumes:
       - .:/var/www/kuba.moscow
