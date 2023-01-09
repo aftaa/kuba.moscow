@@ -1,6 +1,6 @@
 <?php
-// header('HTTP/1.0 404 Not Found');
-// exit;
+header('HTTP/1.0 404 Not Found');
+exit;
 $filename1 = 'sites1.txt';
 $filename2 = 'sites2.txt';
 
